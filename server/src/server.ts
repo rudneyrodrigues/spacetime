@@ -1,3 +1,12 @@
-const nome: string = 'Rudney'
+import fastify from 'fastify'
 
-console.log(nome)
+const PORT = 3333
+
+const app = fastify()
+
+app
+  .get('/hello', (reply) => {
+    return 'Hello World'
+  })
+  .listen({ port: PORT })
+  .then(() => console.log(`🚀 HTTP server running on http://localhost:${PORT}`))
