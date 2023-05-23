@@ -4,7 +4,8 @@
   "description": "NLW Spacetime",
   "main": "index.js",
   "scripts": {
-    "dev": "tsx watch src/server.ts --ignore node_modules/"
+    "dev": "tsx watch src/server.ts --ignore node_modules/",
+    "lint": "eslint src --ext .ts --fix"
   },
   "keywords": [],
   "author": "",
@@ -12,10 +13,13 @@
   "devDependencies": {
     "@rocketseat/eslint-config": "^1.2.0",
     "@types/node": "^20.1.5",
+    "eslint": "^8.41.0",
+    "prisma": "^4.14.1",
     "tsx": "^3.12.7",
     "typescript": "^5.0.4"
   },
   "dependencies": {
+    "@prisma/client": "^4.14.1",
     "fastify": "^4.17.0"
   }
 }
